@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  appearance: none;
+  background: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: "Alokary";
+  src: url("/assets/alokary.ttf");
+}
+
+
+/***********
+** HEADER **
+***********/
+
+.top-links {
+  height: 110px;
+  background: #97a291;
+  width: 100%;
+}
+
+.top-links div {
+  display: inline-block;
+}
+
+.about {
+  color: #fbf3ea;
+  text-align: center;
+  font: 400 16px "Alokary", serif;
+  letter-spacing: 0.18em;
+  position: absolute;
+  width: 90px;
+  left: calc(25% - 80.5px);
+  margin: 40px 0 0 -45px;
+}
+
+.meimei-lu-logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -162px;
+  text-align: center;
+  width: 324px;
+  height: 110px;
+}
+
+.meimei-lu-0, .meimei-lu-1, .meimei-lu-2 {
+  color: #fbf3ea;
+  text-align: center;
+  font: 400 40px "Alokary", serif;
+  letter-spacing: 0.18em;
+  position: absolute;
+  width: 322px;
+}
+.meimei-lu-0 {left: 0;}
+.meimei-lu-1 {left: 1px;}
+.meimei-lu-2 {left: 2px;}
+
+.m-cover-0, .m-cover-1 {
+  position: absolute;
+  background: #97a291;
+  width: 11px;
+  height: 2px;
+  top: 66px;
+}
+.m-cover-0 {left: 20px;}
+.m-cover-1 {left: 125px;}
+
+.contact {
+  color: #fbf3ea;
+  text-align: center;
+  font: 400 16px "Alokary", serif;
+  letter-spacing: 0.18em;
+  position: absolute;
+  width: 110px;
+  left: calc(75% + 80.5px);
+  margin: 40px 0 0 -55px;
+
+}
+
+.line-sep {
+  display: block;
+  border-style: solid;
+  border-color: #fbf3ea;
+  border-width: 3px 0 0 0;
+  margin-top: auto;
+}
+
+
+/***********
+*** MAIN ***
+***********/
+
+.home-page .img-container {
+  background: #ffffff;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.home-page .bg-img {
+  width: 100%;
+  display: block;
+}
+
+.home-page .view-works {
+  color: #fbf3ea;
+  text-align: center;
+  font: 400 24px "Romana-Regular", serif;
+  border-radius: 100px;
+  border-style: solid;
+  border-color: #fbf3ea;
+  border-width: 2px;
+  position: absolute;
+  width: 220px;
+  margin-left: -110px;
+  left: 50%;
+  top: 60px;
+  padding: 10px 0;
+}
