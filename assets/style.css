@@ -1,16 +1,25 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
+/************
+** GENERAL **
+************/
+
+* {-webkit-font-smoothing: antialiased;}
+
+a {
   text-decoration: none;
-  appearance: none;
-  background: none;
-  -webkit-font-smoothing: antialiased;
+  color: inherit;
 }
 
 @font-face {
   font-family: "Alokary";
   src: url("/assets/alokary.ttf");
+}
+@font-face {
+  font-family: "Romana";
+  src: url("/assets/romana.otf");
+}
+@font-face {
+  font-family: "Alata";
+  src: url("/assets/alata.ttf");
 }
 
 
@@ -18,14 +27,16 @@
 ** HEADER **
 ***********/
 
+/* Global */
 .top-links {
+  position: relative;
   height: 110px;
-  background: #97a291;
   width: 100%;
 }
 
 .top-links div {
   display: inline-block;
+  position: absolute;
 }
 
 .about {
@@ -33,14 +44,12 @@
   text-align: center;
   font: 400 16px "Alokary", serif;
   letter-spacing: 0.18em;
-  position: absolute;
   width: 90px;
   left: calc(25% - 80.5px);
   margin: 40px 0 0 -45px;
 }
 
 .meimei-lu-logo {
-  position: absolute;
   left: 50%;
   margin-left: -162px;
   text-align: center;
@@ -53,7 +62,6 @@
   text-align: center;
   font: 400 40px "Alokary", serif;
   letter-spacing: 0.18em;
-  position: absolute;
   width: 322px;
 }
 .meimei-lu-0 {left: 0;}
@@ -61,21 +69,16 @@
 .meimei-lu-2 {left: 2px;}
 
 .m-cover-0, .m-cover-1 {
-  position: absolute;
-  background: #97a291;
   width: 11px;
   height: 2px;
   top: 66px;
 }
-.m-cover-0 {left: 20px;}
-.m-cover-1 {left: 125px;}
 
 .contact {
   color: #fbf3ea;
   text-align: center;
   font: 400 16px "Alokary", serif;
   letter-spacing: 0.18em;
-  position: absolute;
   width: 110px;
   left: calc(75% + 80.5px);
   margin: 40px 0 0 -55px;
@@ -90,35 +93,90 @@
   margin-top: auto;
 }
 
+/* Main page */
+body.main-page {
+  background-color: #97a291;
+
+  .top-links {
+    background-color: #97a291;
+  }
+  .m-cover-0 {
+    background-color: #97a291;
+    left: 16px;
+  }
+  .m-cover-1 {
+    background-color: #97a291;
+    left: 127px;
+  }
+}
+
+/* About page */
+body.about-page {
+  background-color: #c43730;;
+
+  .top-links {
+    background-color: #c43730;
+  }
+  .m-cover-0 {
+    background-color: #c43730;
+    left: 128px;
+  }
+}
 
 /***********
 *** MAIN ***
 ***********/
 
-.home-page .img-container {
-  background: #ffffff;
-  width: 100%;
-  text-align: center;
-  position: relative;
+/* Global */
+.bg-img-container {position: relative;}
+.bg-img {width: 100%;}
+
+/* Main page */
+main.main-page {
+  .bg-img-container {
+    background: #97a291;
+  }
+  .view-works {
+    position: absolute;
+    color: #fbf3ea;
+    text-align: center;
+    font: 400 24px "Romana", serif;
+    border-radius: 100px;
+    border-style: solid;
+    border-color: #fbf3ea;
+    border-width: 2px;
+    width: 220px;
+    margin-left: -110px;
+    left: 50%;
+    top: 60px;
+    padding: 10px 0;
+  }
 }
 
-.home-page .bg-img {
-  width: 100%;
-  display: block;
-}
+/* About page */
+main.about-page {
+  .back-chevron {
+    position: absolute;
+    left: 1.5%;
+    top: 1%;
+    padding: 14px;
+  }
 
-.home-page .view-works {
-  color: #fbf3ea;
-  text-align: center;
-  font: 400 24px "Romana-Regular", serif;
-  border-radius: 100px;
-  border-style: solid;
-  border-color: #fbf3ea;
-  border-width: 2px;
-  position: absolute;
-  width: 220px;
-  margin-left: -110px;
-  left: 50%;
-  top: 60px;
-  padding: 10px 0;
+  .polaroid-container {
+    position: relative;
+  }
+
+  .polaroid-left {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    transform: rotate(-3.822deg);
+
+  }
+  .polaroid-right {
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    transform: rotate(7.528deg);
+  }
 }
