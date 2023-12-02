@@ -177,7 +177,7 @@ body.about-page .m-cover-0 {
   height: 480px;
 }
 
-.polaroid-left {
+.polaroid-about-left {
   height: 350px;
   position: absolute;
   transform: rotate(-3.822deg);
@@ -186,7 +186,7 @@ body.about-page .m-cover-0 {
   top: 130px;
 }
 
-.polaroid-right {
+.polaroid-about-right {
   height: 350px;
   position: absolute;
   transform: rotate(7.528deg);
@@ -201,9 +201,18 @@ body.about-page .m-cover-0 {
   margin-top: 55px;
 }
 
+.about-me-bg {
+  opacity: 0.3;
+  background: repeat url("/assets/fabric.jpg"), lightgray 50%;
+  background-size: auto;
+  mix-blend-mode: color-burn;
+  z-index: 10;
+  border-radius: 20px;
+}
+
 .about-me-frame {
   text-align: center;
-  background: #fbf3ea;
+  background-color: #fbf3ea;
   border-radius: 20px;
   width: 535px;
   margin: auto;
@@ -220,4 +229,28 @@ body.about-page .m-cover-0 {
   font: 400 16px "Alata", sans-serif;
   margin: 15px 83px;
   padding-bottom: 35px;
+}
+
+/* Contact */
+.polaroid-contact-left {
+  height: 350px;
+  position: absolute;
+  transform: rotate(-6.414deg);
+  z-index: 1;
+  left: 80px;
+  top: 130px;
+}
+
+.polaroid-contact-right {
+  height: 350px;
+  position: absolute;
+  transform: rotate(9.433deg);
+  z-index: 2;
+  left: 330px;
+  top: 180px;
+}
+
+.contact-body {
+  color: #545454;
+  font: 400 36px "Romana", serif;
 }
