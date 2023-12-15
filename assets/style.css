@@ -21,6 +21,10 @@ a {
   font-family: "Alata";
   src: url("/assets/alata.ttf");
 }
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fraunces.ttf");
+}
 
 
 /***********
@@ -280,18 +284,7 @@ body.works-page .top-links {
 
 /* Works page */
 body.works-page {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  background: url("/assets/fabric.jpg"), lightgray 25%;
-  background-size: 50%;
-  border-radius: 20px;
-  mix-blend-mode: color-burn;
-  z-index: 20;
+  background-image: none;
 }
 
 body.works-page h1 {
@@ -320,12 +313,14 @@ body.works-page h1 {
 }
 
 .works-category-heading {
-  margin: 15px 32px;
+  margin: 20px 32px;
 }
 
 .works-category-heading a {
+  display: inline-block;
   margin-top: -10px;
   padding: 5px;
+  vertical-align: middle;
 }
 
 .works-category-heading .finger-right {
@@ -342,7 +337,7 @@ body.works-page h1 {
   margin-right: 10px;
 }
 
-.works-category-image-container img {
+.works-category-img-container img {
   width: 100%;
 }
 
@@ -355,14 +350,17 @@ body.works-page h1 {
   display: inline-block;
   width: 30%;
   height: 100%;
+  margin-bottom: 20px;
 }
 
-.end-card h1 {
-  margin-top: 20px;
+.end-card .finger-up {
+  display: inline-block;
+  margin-bottom: 35px;
 }
 
 .finger-left, .finger-right, .finger-up {
   height: 32px;
+  vertical-align: middle;
 }
 
 .finger-left {
@@ -371,4 +369,15 @@ body.works-page h1 {
 
 .finger-up {
   transform: rotate(-90deg);
+}
+
+/* Works subpages */
+
+.works-img-container img {
+  width: 100%;
+  height: 400px;
+}
+
+.works-caption-title {
+  font-family: "Fraunces", serif;
 }
