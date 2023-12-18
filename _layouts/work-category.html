@@ -25,7 +25,8 @@
       <h1>{{ page.title | upcase }}</h1>
       <div class="container">
         <div class="row">
-          {% for work in site.works | sort: "priority" %}
+          {% assign works = site.works | sort: "priority" %}
+          {% for work in works %}
             {% if work.category == page.category %}
               <div class="col-lg-6">
                 <a href="{{ work.url }}">

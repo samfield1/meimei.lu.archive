@@ -52,6 +52,5 @@ theme: minima
 collections:
   works:
     output: true
-    sort_by: priority
 
 permalink: pretty
