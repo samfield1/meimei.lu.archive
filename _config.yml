@@ -48,3 +48,10 @@ theme: minima
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+collections:
+  works:
+    output: true
+    sort_by: priority
+
+permalink: pretty
