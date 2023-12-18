@@ -11,19 +11,19 @@ a {
 
 @font-face {
   font-family: "Alokary";
-  src: url("/assets/alokary.ttf");
+  src: url("/assets/fonts/alokary.ttf");
 }
 @font-face {
   font-family: "Romana";
-  src: url("/assets/romana.otf");
+  src: url("/assets/fonts/romana.otf");
 }
 @font-face {
   font-family: "Alata";
-  src: url("/assets/alata.ttf");
+  src: url("/assets/fonts/alata.ttf");
 }
 @font-face {
   font-family: "Fraunces";
-  src: url("/assets/fraunces.ttf");
+  src: url("/assets/fonts/fraunces.ttf");
 }
 
 
@@ -147,6 +147,7 @@ body.works-page .top-links {
 
 /* Main page */
 .view-works {
+  letter-spacing: 0.07em;
   position: absolute;
   color: #fbf3ea;
   text-align: center;
@@ -373,9 +374,13 @@ body.works-page h1 {
 
 /* Works subpages */
 
+.works-img-container {
+  height: 400px;
+  overflow: hidden;
+}
+
 .works-img-container img {
   width: 100%;
-  height: 400px;
 }
 
 .works-caption-title {
