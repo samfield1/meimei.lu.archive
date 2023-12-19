@@ -20,11 +20,25 @@
       <div class="back-btn">
         <a href="/works/{{ page.category }}"><img class="finger-left" src="/assets/finger.png" /></a>
       </div>
-      <h1>{{ page.heading }}</h1>
-      <div class="container">
-        <div class="row">
-          {{ page.content }}
-        </div>
+      {{ page.content }}
+      <!-- Pagination links -->
+      <div class="pagination">
+        {% assign works_all = site.works | where_exp: "work","work.category == page.category" %}
+        {% assign works_after = works_all | where_exp: "work","work.priority > page.priority" %}
+        {% assign works_after_sorted = works_after | sort: "priority" %}
+        {% assign next_work = works_after_sorted[0] %}
+
+        {% assign works_before = works_all | where_exp: "work","work.priority < page.priority" %}
+        {% assign works_before_sorted = works_before | sort: "priority" | reverse %}
+        {% assign prev_work = works_before_sorted[0] %}
+
+        {% if prev_work %}
+          <a href="{{ prev_work.url }}">Previous: {{ prev_work.title }}</a>
+        {% endif %}
+        <br/>
+        {% if next_work %}
+          <a href="{{ next_work.url }}">Next: {{ next_work.title }}</a>
+        {% endif %}
       </div>
     </main>
   </body>
