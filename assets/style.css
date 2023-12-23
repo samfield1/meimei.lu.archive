@@ -230,7 +230,7 @@ body.works-page .top-links {
   width: 100%;
   height: 100%;
   opacity: 0.3;
-  background: url("/assets/fabric.jpg"), lightgray 25%;
+  background: url("/assets/fabric.webp"), lightgray 25%;
   background-size: 200%;
   border-radius: 20px;
   mix-blend-mode: color-burn;
@@ -385,4 +385,29 @@ body.works-page h1 {
 
 .works-caption-title {
   font-family: "Fraunces", serif;
+}
+
+/* Work main pages */
+.work-img-container {
+  overflow: hidden;
+}
+
+.col-md-12 .work-img-container {
+  height: auto;
+}
+
+.col-md-6 .work-img-container {
+  height: auto;
+}
+
+.work-img-container img {
+  width: 100%;
+}
+
+.page-item.prev {
+  float: left;
+}
+
+.page-item.next {
+  float: right;
 }

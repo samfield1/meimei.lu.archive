@@ -16,12 +16,13 @@
         <div class="contact"><a href="/contact">Contact</a></div>
       </div>
     </header>
-    <main>
+    <main class="work-page">
       <div class="back-btn">
-        <a href="/works/{{ page.category }}"><img class="finger-left" src="/assets/finger.png" /></a>
+        <a href="/works/{{ page.category }}"><img class="finger-left" src="/assets/finger.webp" /></a>
       </div>
       {{ page.content }}
       <!-- Pagination links -->
+      <hr class="work-line-sep" />
       <div class="pagination">
         {% assign works_all = site.works | where_exp: "work","work.category == page.category" %}
         {% assign works_after = works_all | where_exp: "work","work.priority > page.priority" %}
@@ -33,13 +34,27 @@
         {% assign prev_work = works_before_sorted[0] %}
 
         {% if prev_work %}
-          <a href="{{ prev_work.url }}">Previous: {{ prev_work.title }}</a>
-        {% endif %}
+          <div class="page-item prev me-auto">
+            <a href="{{ prev_work.url }}">Previous Project<br /> {{ prev_work.title }}</a>
+          </div>
+          {% endif %}
         <br/>
         {% if next_work %}
-          <a href="{{ next_work.url }}">Next: {{ next_work.title }}</a>
+          <div class="page-item next ms-auto">
+            <a href="{{ next_work.url }}">Next Project<br /> {{ next_work.title }}</a>
+          </div>
         {% endif %}
       </div>
+      <hr class="work-line-sep" />
+      <div class="end-card">
+        <a href="#">
+          <img class="finger-up" src="/assets/finger.webp" />
+          <h1>BACK TO TOP</h1>
+        </a>
+      </div>
     </main>
+    <footer>
+      <div class="line-sep"></div>
+    </footer>
   </body>
 </html>
